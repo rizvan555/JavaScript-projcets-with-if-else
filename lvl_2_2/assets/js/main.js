@@ -11,12 +11,12 @@ function checkAirQuality() {
       "Level of health concern: Good<br>Level of health effect: Little or no risk";
     document.body.classList.toggle("green");
     label.innerText = "AQI: " + checker;
-  } else if (checker <= 100) {
+  } else if (checker >= 50 && checker <= 100) {
     result.innerHTML =
       "Level of health concern: Moderate<br>Level of health effect: Acceptable quality";
     document.body.classList.toggle("yellow");
     label.innerText = "AQI: " + checker;
-  } else if (checker <= 150) {
+  } else if (checker >= 100 && checker <= 150) {
     result.innerHTML =
       "Level of health concern: Unhealthy for sensitive groups<br>Level of health effect: Generable publics not likely affected";
     document.body.classList.toggle("orange");
